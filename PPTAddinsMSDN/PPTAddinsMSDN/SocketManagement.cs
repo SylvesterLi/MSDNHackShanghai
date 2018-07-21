@@ -18,12 +18,15 @@ namespace PPTAddinsMSDN
             IPAddress ip = IPAddress.Any;
             IPEndPoint endPoint = new IPEndPoint(ip, 2018);
             Debug.WriteLine(ip.ToString());
+            
             socket.Bind(endPoint);
             Debug.WriteLine("绑定成功\r\n");
-            //Globals.Ribbons.RibbonUI.DebugLabel.Label = "绑定成功";
+            Globals.Ribbons.RibbonMSDN.debugWindow.Text = "绑定成功";
+            
             socket.Listen(2);
             Debug.WriteLine("监听成功\r\n");
-            //Globals.Ribbons.RibbonUI.DebugLabel.Label = "监听成功";
+            Globals.Ribbons.RibbonMSDN.debugWindow.Text = "监听成功";
+            
             //等待客户端的连接
             //如果连接成功
             //Socket socketSend=socket.Accept();
@@ -48,6 +51,7 @@ namespace PPTAddinsMSDN
                 //获取链接的IP地址
                 var sendIpoint = send.RemoteEndPoint.ToString();
                 Debug.WriteLine(send.RemoteEndPoint.ToString() + " : 连接成功\r\n");
+                Globals.Ribbons.RibbonMSDN.debugWindow.Text = "send.RemoteEndPoint.ToString()" + " : 连接成功\r\n";
                 //Globals.Ribbons.RibbonUI.DebugLabel.Label = send.RemoteEndPoint.ToString() + " : 连接成功\r\n";
                 //开启一个新线程不停接收消息
                 Thread thread = new Thread(Recive);
@@ -81,7 +85,8 @@ namespace PPTAddinsMSDN
                     try
                     {
                         string[] th = str.Split(',');
-                         th[0]
+                        BuildDataToExcel.AddToExcel(th[0], th[1]);
+
 
 
                     }

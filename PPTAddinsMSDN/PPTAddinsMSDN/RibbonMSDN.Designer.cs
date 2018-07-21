@@ -40,10 +40,11 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.btnSocketConnect = this.Factory.CreateRibbonButton();
             this.btnDisconnect = this.Factory.CreateRibbonButton();
-            this.group2 = this.Factory.CreateRibbonGroup();
             this.comboBox1 = this.Factory.CreateRibbonComboBox();
+            this.group2 = this.Factory.CreateRibbonGroup();
             this.upLoadimg = this.Factory.CreateRibbonButton();
             this.btnChecker = this.Factory.CreateRibbonButton();
+            this.debugWindow = this.Factory.CreateRibbonEditBox();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.group2.SuspendLayout();
@@ -62,6 +63,7 @@
             this.group1.Items.Add(this.btnSocketConnect);
             this.group1.Items.Add(this.btnDisconnect);
             this.group1.Items.Add(this.comboBox1);
+            this.group1.Items.Add(this.debugWindow);
             this.group1.Label = "Device Management";
             this.group1.Name = "group1";
             // 
@@ -83,13 +85,6 @@
             this.btnDisconnect.ShowImage = true;
             this.btnDisconnect.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnDisconnect_Click);
             // 
-            // group2
-            // 
-            this.group2.Items.Add(this.upLoadimg);
-            this.group2.Items.Add(this.btnChecker);
-            this.group2.Label = "MIcrosoft Service";
-            this.group2.Name = "group2";
-            // 
             // comboBox1
             // 
             ribbonDropDownItemImpl1.Label = "Ai-Think ESP32";
@@ -101,6 +96,13 @@
             this.comboBox1.Label = "Devices List";
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Text = "No devices detected";
+            // 
+            // group2
+            // 
+            this.group2.Items.Add(this.upLoadimg);
+            this.group2.Items.Add(this.btnChecker);
+            this.group2.Label = "MIcrosoft Service";
+            this.group2.Name = "group2";
             // 
             // upLoadimg
             // 
@@ -119,6 +121,12 @@
             this.btnChecker.OfficeImageId = "DiagramChangeToRadialClassic";
             this.btnChecker.ShowImage = true;
             this.btnChecker.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnChecker_Click);
+            // 
+            // debugWindow
+            // 
+            this.debugWindow.Label = "Debug Info";
+            this.debugWindow.Name = "debugWindow";
+            this.debugWindow.Text = "No info at  now";
             // 
             // RibbonMSDN
             // 
@@ -146,6 +154,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton upLoadimg;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnChecker;
+        internal Microsoft.Office.Tools.Ribbon.RibbonEditBox debugWindow;
     }
 
     partial class ThisRibbonCollection

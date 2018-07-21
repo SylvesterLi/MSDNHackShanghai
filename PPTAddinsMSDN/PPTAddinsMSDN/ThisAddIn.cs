@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Office = Microsoft.Office.Core;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.PowerPoint;
 
 namespace PPTAddinsMSDN
 {
@@ -13,11 +14,15 @@ namespace PPTAddinsMSDN
     {
         public UserControl myUserControl1;
         public static Microsoft.Office.Tools.CustomTaskPane myCustomTaskPane;
-
+        
+        //Excel
+        
+        static string str = null;
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-          
+
             
+
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
