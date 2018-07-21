@@ -72,7 +72,8 @@ EncodingAESKey
 
 微信Face Api
 https://eastus2.api.cognitive.microsoft.com/face/v1.0
+7d4007bbda084c91b3121a28409aca81
 
-
+Bot API：https://hackshanghai.azurewebsites.net/api/messages
 
 

@@ -71,7 +71,7 @@ namespace PPTAddinsMSDN
                     byte[] buffer = new byte[1024 * 1024 * 20];
                     var effective = send.Receive(buffer);
                     //有效字节为0则跳过
-                    if (effective == 0)
+                    if (effective <= 3)
                     {
                         break;
                     }
@@ -80,6 +80,8 @@ namespace PPTAddinsMSDN
                     string[] ip = send.RemoteEndPoint.ToString().Split(':');
                     try
                     {
+                        string[] th = str.Split(',');
+                         th[0]
 
 
                     }
@@ -89,7 +91,7 @@ namespace PPTAddinsMSDN
                     }
 
 
-                    Debug.WriteLine(str);
+                    Debug.WriteLine(send.RemoteEndPoint.ToString()+":"+str);
                     //var buffers = Encoding.UTF8.GetBytes("Recived:" + str);
                     //将得到的字符串再返回给下位机
                     //send.Send(buffers);

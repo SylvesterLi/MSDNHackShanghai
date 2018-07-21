@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceRoot}",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\tools",
+                "C:\\Program Files (x86)\\Arduino\\libraries",
+                "C:\\Users\\SANG-ASUS\\Documents\\Arduino\\hardware\\tools",
+                "C:\\Users\\SANG-ASUS\\Documents\\Arduino\\libraries",
+                "C:\\Users\\SANG-ASUS\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "C:\\Program Files (x86)\\Arduino\\hardware\\tools",
+                    "C:\\Program Files (x86)\\Arduino\\libraries",
+                    "C:\\Users\\SANG-ASUS\\Documents\\Arduino\\hardware\\tools",
+                    "C:\\Users\\SANG-ASUS\\Documents\\Arduino\\libraries",
+                    "C:\\Users\\SANG-ASUS\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
