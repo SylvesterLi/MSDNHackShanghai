@@ -70,4 +70,9 @@ EncodingAESKey
 0RS4qZN1Wcshydmx2BvJAJkFujiVISSLNwij3mH2yLw
 
 
+微信Face Api
+https://eastus2.api.cognitive.microsoft.com/face/v1.0
+
+
+
 
