@@ -19,5 +19,6 @@ namespace PPTAddinsMSDN
             double b = Convert.ToDouble(h.Trim());
             RibbonMSDN ribbonMSDN=Globals.Ribbons.RibbonMSDN;
             ribbonMSDN.AddData(a, b);
+        }
     }
 }

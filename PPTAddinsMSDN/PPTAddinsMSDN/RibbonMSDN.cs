@@ -30,7 +30,7 @@ namespace PPTAddinsMSDN
 
         private void btnDisconnect_Click(object sender, RibbonControlEventArgs e)
         {
-            BuildDataToExcel.AddToExcel("12","14");
+            BuildDataToExcel.AddToExcel("85","32");
         }
 
         private void upLoadimg_Click(object sender, RibbonControlEventArgs e)
@@ -42,7 +42,8 @@ namespace PPTAddinsMSDN
         private void btnChecker_Click(object sender, RibbonControlEventArgs e)
         {
             //ThisAddIn.myCustomTaskPane.Visible = !ThisAddIn.myCustomTaskPane.Visible;
-            
+            mydoc = Globals.ThisAddIn.Application.ActivePresentation.Slides[5];
+            mydoc.Export("myPathtoFile.png", "png");
 
 
         }
