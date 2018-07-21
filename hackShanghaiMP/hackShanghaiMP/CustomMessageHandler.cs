@@ -18,7 +18,7 @@ namespace hackShanghaiMP
 {
     public class CustomMessageHandler : MessageHandler<MessageContext<IRequestMessageBase, IResponseMessageBase>>
     {
-        string con = "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/f7bb3f9a-e1a5-44a9-b05c-2808e3ad7c43/url";
+
 
         public CustomMessageHandler(Stream inputStream, PostModel postModel)
             : base(inputStream, postModel)
@@ -32,7 +32,7 @@ namespace hackShanghaiMP
             //在这里可以返回各种各样的消息给客户。详情参见博客
 
             var responseMessage = base.CreateResponseMessage<ResponseMessageText>(); //ResponseMessageText也可以是News等其他类型
-            responseMessage.Content = "欢迎来到佳蒂亚树！\r\n" + "访问博客点击：http://wicrosoft.ml" + "\r\n\r\n" + "查询家中实况请输入“家”" + "\r\n" + "查找我的车请发送“车”\r\n" + "改变日常洗浴习惯请发送“新鲜”"+"发送其他消息默认接入智能QnA Bot！\r\n 这条消息来自DefaultResponseMessage。";
+            responseMessage.Content = "欢迎来到佳蒂亚树！\r\n" + "访问博客点击：http://wicrosoft.ml" + "\r\n\r\n" + "查询家中实况请输入“家”" + "\r\n" + "查找我的车请发送“车”\r\n" + "改变日常洗浴习惯请发送“换”" + "发送其他消息默认接入智能QnA Bot！\r\n 这条消息来自DefaultResponseMessage。";
 
             return responseMessage;
         }
@@ -45,7 +45,7 @@ namespace hackShanghaiMP
             if (requestMessage.Content == "家")
             {
 
-                responseMessage.Content = "当前家中情况如下：\r\n"+"温度：18℃\r\n"+"湿度：适合";//这里的requestMessage.FromUserName也可以直接写成base.WeixinOpenId
+                responseMessage.Content = "当前家中情况如下：\r\n" + "温度：18℃\r\n" + "湿度：适合";//这里的requestMessage.FromUserName也可以直接写成base.WeixinOpenId
                 return responseMessage;
 
             }
@@ -96,18 +96,20 @@ namespace hackShanghaiMP
             //计算机视觉
             if (CVServiceSwitch == "换")
             {
-                float f = CognitiveService.ComputerVisionService(requestMessage.PicUrl);
-                if (f>=0.5)
-                {
-                    result = "今天心情不错嘛！\r\n"+"我给你的生活加了一点小浪漫哦~";
-                }
-                else
-                {
-                    result = "今天需要放松一下心情吗？\r\n你看起来很累！";
-                }
-                
+                //暂时不调了
+
+                //float f = CognitiveService.ComputerVisionService(requestMessage.PicUrl);
+                //if (f==1)
+                //{
+                //    result = "今天心情不错嘛！\r\n"+"我给你的生活加了一点小浪漫哦~";
+                //}
+                //else
+                //{
+                result = "今天需要放松一下心情吗？\r\n你看起来很累！";
+                //}
+
             }
-            
+
             else
             {
                 //此时CVServiceSwitch已经失效
