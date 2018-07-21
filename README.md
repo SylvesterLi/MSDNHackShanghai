@@ -33,3 +33,7 @@ Technology Key Word：Azure-IoT,Microsoft-Cognitive-Service,Microsoft-Office,Mic
 怎么做的
 
 现在开始做吧
+
+我想先做图集训练
+
+还是先调整好Socket吧，最起码有个雏形才能开始动
