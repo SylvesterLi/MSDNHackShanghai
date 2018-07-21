@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using Microsoft.Office.Tools.Ribbon;
 
 namespace PPTAddinsMSDN
@@ -34,6 +35,9 @@ namespace PPTAddinsMSDN
 
         private void btnChecker_Click(object sender, RibbonControlEventArgs e)
         {
+            //ThisAddIn.myCustomTaskPane.Visible = !ThisAddIn.myCustomTaskPane.Visible;
+            
+
 
         }
     }

@@ -116,6 +116,7 @@
             this.btnChecker.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnChecker.Label = "Count things";
             this.btnChecker.Name = "btnChecker";
+            this.btnChecker.OfficeImageId = "DiagramChangeToRadialClassic";
             this.btnChecker.ShowImage = true;
             this.btnChecker.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnChecker_Click);
             // 
