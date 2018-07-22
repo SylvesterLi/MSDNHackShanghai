@@ -11,14 +11,22 @@ namespace PPTAddinsMSDN
 {
     public static class BuildDataToExcel
     {
-        
+
         public static void AddToExcel(string t, string h)
         {
+            try
+            {
+                double a = Convert.ToDouble(t.Trim());
+                double b = Convert.ToDouble(h.Trim());
+                RibbonMSDN ribbonMSDN = Globals.Ribbons.RibbonMSDN;
+                ribbonMSDN.AddData(a, b);
+            }
             //进行转换
-            double a = Convert.ToDouble(t.Trim());
-            double b = Convert.ToDouble(h.Trim());
-            RibbonMSDN ribbonMSDN=Globals.Ribbons.RibbonMSDN;
-            ribbonMSDN.AddData(a, b);
+            catch
+            {
+
+            }
+            
         }
     }
 }

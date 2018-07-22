@@ -51,7 +51,7 @@ namespace PPTAddinsMSDN
                 //获取链接的IP地址
                 var sendIpoint = send.RemoteEndPoint.ToString();
                 Debug.WriteLine(send.RemoteEndPoint.ToString() + " : 连接成功\r\n");
-                Globals.Ribbons.RibbonMSDN.debugWindow.Text = "send.RemoteEndPoint.ToString()" + " : 连接成功\r\n";
+                Globals.Ribbons.RibbonMSDN.debugWindow.Text = send.RemoteEndPoint.ToString() + " : 连接成功\r\n";
                 //Globals.Ribbons.RibbonUI.DebugLabel.Label = send.RemoteEndPoint.ToString() + " : 连接成功\r\n";
                 //开启一个新线程不停接收消息
                 Thread thread = new Thread(Recive);
@@ -75,7 +75,7 @@ namespace PPTAddinsMSDN
                     byte[] buffer = new byte[1024 * 1024 * 20];
                     var effective = send.Receive(buffer);
                     //有效字节为0则跳过
-                    if (effective <= 3)
+                    if (effective <= 0)
                     {
                         break;
                     }
@@ -85,7 +85,12 @@ namespace PPTAddinsMSDN
                     try
                     {
                         string[] th = str.Split(',');
-                        BuildDataToExcel.AddToExcel(th[0], th[1]);
+                        if(th[0] is string&&th[1] is string)
+                        {
+
+                            BuildDataToExcel.AddToExcel(th[0], th[1]);
+                        }
+                        
 
 
 
@@ -93,6 +98,7 @@ namespace PPTAddinsMSDN
                     catch
                     {
                         //令人窒息的Bug！！！！
+                        //SocketBind();
                     }
 
 
@@ -109,7 +115,7 @@ namespace PPTAddinsMSDN
             }
             catch
             {
-
+                //SocketBind();
             }
 
 
