@@ -55,10 +55,9 @@ Cache-Control: no-cache
 Postman-Token: f78e017e-f75b-4ccb-9d98-a93ffc03e1a0
 
 {
-
-	"Name":"People",
-    "Confidence":"0.99",
-    "Hint":"sang"
+"Name":"People",
+"Confidence":"0.99",
+"Hint":"sang"
 }
 </code>
 
