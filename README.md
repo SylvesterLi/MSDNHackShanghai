@@ -41,7 +41,7 @@ Technology Key Word：Azure-IoT,Microsoft-Cognitive-Service,Microsoft-Office,Mic
 
 计算机视觉识别后Flow API：
 
-<code>
+```C#
 POST
 /workflows/bd0434bd9e094105a9bc2644810bac75/triggers/manual/paths/invoke?
 api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=24mvSH5194CeGouNg_kIpRxFAMZF7Q3wHYjw1Z83kCE HTTP/1.1
@@ -59,7 +59,7 @@ Postman-Token: f78e017e-f75b-4ccb-9d98-a93ffc03e1a0
 "Confidence":"0.99",
 "Hint":"sang"
 }
-</code>
+```
 
 微信配置：
 
